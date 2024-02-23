@@ -24,4 +24,18 @@ To add the Maps API key to your Android project, follow these steps:
 2. Open the `secrets.properties` file and add the following line:
    MAPS_API_KEY="YOUR_API_KEY"
 
+/\*\*
+
+- Use Firebase CLI and flutterfire to configure Firebase.
+-
+- Reference: [Google Maps Flutter](https://developers.google.com/maps/flutter-package/config)
+  \*/
+
+/\*\*
+
 3. Use Firebase CLI and flutterfire to configure firebase.
+
+- Use Firebase CLI and flutterfire to configure Firebase.
+-
+- Reference: [Firebase CLI](https://firebase.google.com/docs/cli)
+  \*/
