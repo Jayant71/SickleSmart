@@ -4,8 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sicklesmart/colors.dart';
 import 'package:sicklesmart/firebase_options.dart';
-import 'package:sicklesmart/layouts/mainlayout.dart';
-import 'package:sicklesmart/screens/registration/registration.dart';
 import 'package:sicklesmart/screens/registration/welcomeauth.dart';
 
 void main() async {
@@ -27,9 +25,7 @@ class SickleSmart extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-
         title: 'Sickle Smart',
-
         theme: ThemeData(
           colorScheme: lightColorScheme,
           appBarTheme: const AppBarTheme(
@@ -46,7 +42,6 @@ class SickleSmart extends StatelessWidget {
             textTheme:
                 _buildTextTheme(ThemeData.dark().textTheme, darkColorScheme)),
         home: child,
-        // home: const MedicalReport(),
       ),
       child: const WelcomeAuthScreen(),
     );

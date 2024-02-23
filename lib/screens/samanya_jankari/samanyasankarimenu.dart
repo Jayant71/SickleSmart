@@ -3,7 +3,6 @@ import 'package:sicklesmart/screens/samanya_jankari/sjscreen2.dart';
 import 'package:sicklesmart/screens/samanya_jankari/sjscreen3.dart';
 import 'package:sicklesmart/screens/samanya_jankari/sjscreen4.dart';
 import 'package:sicklesmart/screens/samanya_jankari/sjscreen5.dart';
-import 'package:sicklesmart/widgets/menucard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

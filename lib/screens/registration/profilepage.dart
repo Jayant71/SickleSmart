@@ -10,7 +10,6 @@ class ProfilePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final auth = ref.read(authenticationProvider);
-    // debugPrint(userData.toString());
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Profile'),

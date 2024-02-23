@@ -7,7 +7,7 @@ class DisplayProfie extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final db = ref.watch(databaseInstanceProvider);
+    ref.watch(databaseInstanceProvider);
     return Card(
       child: ListView(
         children: [],

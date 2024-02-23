@@ -3,7 +3,6 @@ import 'package:sicklesmart/screens/medicalreport.dart';
 import 'package:sicklesmart/screens/registration/profilepage.dart';
 import 'package:sicklesmart/screens/samanya_jankari/samanyasankarimenu.dart';
 import 'package:sicklesmart/screens/about.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -12,7 +11,6 @@ import 'package:sicklesmart/contents/strings.dart';
 import 'package:sicklesmart/screens/leaflet.dart';
 import 'package:sicklesmart/screens/registration/welcomeauth.dart';
 import 'package:sicklesmart/utils/mapscreen.dart';
-import 'package:sicklesmart/widgets/carousalcards.dart';
 
 import '../providers/_provider.dart';
 import 'booklet/book.dart';

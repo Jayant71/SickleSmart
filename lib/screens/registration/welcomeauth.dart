@@ -24,7 +24,7 @@ class WelcomeAuthScreenState extends ConsumerState<WelcomeAuthScreen> {
 
   late ColorScheme colorscheme;
   late TextTheme textTheme;
-  var currentUser;
+  User? currentUser;
   bool isSignIn = true;
   bool isLoading = false;
   final emailController = TextEditingController();
@@ -33,15 +33,13 @@ class WelcomeAuthScreenState extends ConsumerState<WelcomeAuthScreen> {
 
   Future<void> navigate() async {
     currentUser = FirebaseAuth.instance.currentUser;
-    print("////////////////////////");
-    print(currentUser);
 
     if (currentUser == null) {
       return;
     }
     bool isNotNew = await fireStore.db
         .collection("users")
-        .doc(currentUser.uid)
+        .doc(currentUser?.uid)
         .get()
         .then((value) => value.exists);
 
@@ -66,7 +64,6 @@ class WelcomeAuthScreenState extends ConsumerState<WelcomeAuthScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     navigate();
@@ -76,17 +73,6 @@ class WelcomeAuthScreenState extends ConsumerState<WelcomeAuthScreen> {
   Widget build(BuildContext context) {
     colorscheme = Theme.of(context).colorScheme;
     textTheme = Theme.of(context).textTheme;
-    // if (ref.watch(authenticationProvider).currentUser != null) {
-    //   showDialog(
-    //       context: context,
-    //       builder: (builder) => const Center(
-    //             child: CircularProgressIndicator(),
-    //           ),
-    //       barrierDismissible: false);
-    //   navigate();
-    //   Navigator.pop(context);
-    //   return const SizedBox();
-    // }
 
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -159,7 +145,7 @@ class WelcomeAuthScreenState extends ConsumerState<WelcomeAuthScreen> {
                               barrierDismissible: false);
                           var res = await ref
                               .read(authenticationProvider)
-                              .signInWithGoogle(context, isPatient!);
+                              .signInWithGoogle(context, isPatient);
                           if (res == "success" && context.mounted) {
                             Navigator.of(context).pop();
                             Navigator.of(context).pushReplacement(
@@ -185,7 +171,9 @@ class WelcomeAuthScreenState extends ConsumerState<WelcomeAuthScreen> {
                                   );
                                 });
                           } else {
-                            Navigator.of(context).pop();
+                            if (context.mounted) {
+                              Navigator.of(context).pop();
+                            }
                           }
                         },
                         child: const Center(

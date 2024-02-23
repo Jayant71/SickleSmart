@@ -12,7 +12,7 @@ class AddMedication extends ConsumerStatefulWidget {
 }
 
 class _AddMedicationState extends ConsumerState<AddMedication> {
-  final _formKey = GlobalKey<FormState>();
+  // final _formKey = GlobalKey<FormState>();
   final _medicationNameController = TextEditingController();
   final _medicationDoseController = TextEditingController();
   final _medicationFrequencyController = TextEditingController();

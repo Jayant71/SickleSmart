@@ -8,9 +8,7 @@ class FireStore {
     data['createdAt'] = FieldValue.serverTimestamp();
     try {
       return await db.collection(collectionName).add(data);
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
   Future<dynamic> addDataWithId(
@@ -21,9 +19,7 @@ class FireStore {
           .collection(collectionName)
           .doc(docId)
           .set(data, SetOptions(merge: true));
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
   Future<void> updateData(
@@ -31,24 +27,19 @@ class FireStore {
     data['lastupdatedAt'] = FieldValue.serverTimestamp();
     try {
       await db.collection(collectionName).doc(docId).update(data);
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
   Future<void> deleteData(String collectionName, String docId) async {
     try {
       await db.collection(collectionName).doc(docId).delete();
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
   Future<dynamic> getData(String collectionName) async {
     try {
       return await db.collection(collectionName).get();
     } catch (e) {
-      print(e);
       return e;
     }
   }
@@ -57,7 +48,6 @@ class FireStore {
     try {
       return await db.collection(collectionName).doc(docId).get();
     } catch (e) {
-      print(e);
       return e;
     }
   }
@@ -70,7 +60,6 @@ class FireStore {
           .where(fieldName, isEqualTo: fieldValue)
           .get();
     } catch (e) {
-      print(e);
       return e;
     }
   }
