@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "421338990443",
+    "project_id": "sickle-cell-dbb00",
+    "storage_bucket": "sickle-cell-dbb00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:421338990443:android:f6762411d2079985392e2e",
+        "android_client_info": {
+          "package_name": "com.csvtu.sicklesmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "421338990443-qvieehs56cg2gttbt7gr7v7p0tnjqbj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.csvtu.sicklesmart",
+            "certificate_hash": "7e3f48fddb7051b1216b42d9929664da960b8b48"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClFHw6QzA73VFA2RaxtmHcbqq2sqPyimQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
