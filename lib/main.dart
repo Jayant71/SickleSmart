@@ -24,6 +24,7 @@ class SickleSmart extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
+        themeMode: ThemeMode.light,
         debugShowCheckedModeBanner: false,
         title: 'Sickle Smart',
         theme: ThemeData(
